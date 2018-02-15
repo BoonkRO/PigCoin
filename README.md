@@ -1,0 +1,2 @@
+# PigCoin
+Java exam February
