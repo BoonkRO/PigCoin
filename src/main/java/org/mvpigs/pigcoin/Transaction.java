@@ -4,12 +4,12 @@ import java.security.PublicKey;
 
 public class Transaction {
 
-    private String hash;
-    private String prev_hash;
+    private String hash = null;
+    private String prev_hash = null;
     private PublicKey pKey_sender;
     private PublicKey pKey_recipient;
-    private int pigcoins;
-    private String message;
+    private int pigcoins = 0;
+    private String message = null;
     private byte[] signature;
 
     public Transaction(){
@@ -53,6 +53,8 @@ public class Transaction {
         return message;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "\n hash = " + hash + "\n prev_hash = " + prev_hash + "\n pKey_sender = " + pKey_sender.hashCode() + "\n pKey_recipient = " + pKey_recipient.hashCode() + "\n pigcoins = " + pigcoins + "\n message = " + message + "\n";
+    }
 }
